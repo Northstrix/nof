@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import { GithubIcon } from "@/components/github-icon";
 import { LanguageIcon } from "@/components/language-icon";
 import NavCenter from "./Limelight";
@@ -92,7 +91,7 @@ export default function Navbar({
               className="flex items-center cursor-pointer gap-2 font-bold"
               style={{ color: "var(--foreground)", userSelect: "none" }}
             >
-              <Image src="/logo.png" alt="logo" width={32} height={32} className="rounded-md" />
+              <img src="/logo.png" alt="logo" width={32} height={32} className="rounded-md" />
               <span className="text-lg font-bold">{isRTL ? "נוף" : "Nof"}</span>
             </a>
 
