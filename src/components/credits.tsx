@@ -32,9 +32,11 @@ export const Credits = () => {
 
 [i18next](https://www.npmjs.com/package/i18next)
 
-[radix-ui](https://www.npmjs.com/package/radix-ui)
-
 [Lucide React](https://www.npmjs.com/package/lucide-react)
+
+[uuid](https://www.npmjs.com/package/uuid)
+
+[radix-ui](https://www.npmjs.com/package/radix-ui)
 
 [Custom Checkbox](https://21st.dev/Edil-ozi/custom-checkbox/default) by [Edil Ozi](https://21st.dev/Edil-ozi)
 
