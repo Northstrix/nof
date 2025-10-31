@@ -7,6 +7,8 @@ Live app: https://nofpg.netlify.app/
 
 ![Preview](https://raw.githubusercontent.com/Northstrix/nof/refs/heads/main/preview.png)
 
+Powered by [Namer UI](https://namer-ui.vercel.app/)
+
 # Credit
 
 [Color Picker](https://21st.dev/community/components/uplusion23/color-picker/color-picker-with-swatches-and-onchange) by [Trevor McIntire](https://21st.dev/community/uplusion23)
