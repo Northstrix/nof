@@ -1,6 +1,8 @@
 # Nof | נוף
 A modern palette generator that lets you effortlessly create a complete color palette from just one base color.
 
+SourceForge page: https://sourceforge.net/projects/nofpg/
+
 Check it out at https://nofpg.netlify.app/
 
 ![Preview](https://raw.githubusercontent.com/Northstrix/nof/refs/heads/main/preview.png)
