@@ -93,17 +93,7 @@ export function AppFooter() {
           textDecoration: "none",
           pointerEvents: productHuntLoaded ? "auto" : "none",
           borderRadius: 6,
-          border: productHuntLoaded ? "1px solid #242424" : "1px solid transparent",
-          padding: 4,
           transition: "border-color 0.2s ease-out",
-        }}
-        onMouseEnter={(e) => {
-          if (!productHuntLoaded) return;
-          (e.currentTarget as HTMLAnchorElement).style.borderColor = "#404040";
-        }}
-        onMouseLeave={(e) => {
-          if (!productHuntLoaded) return;
-          (e.currentTarget as HTMLAnchorElement).style.borderColor = "#242424";
         }}
       >
         <img
@@ -138,7 +128,6 @@ export function AppFooter() {
           display: "inline-flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: 4,
           textDecoration: "none",
           pointerEvents: verifiedToolsLogoLoaded ? "auto" : "none",
         }}
@@ -152,9 +141,8 @@ export function AppFooter() {
           onLoad={() => setVerifiedToolsLogoLoaded(true)}
           onError={() => setVerifiedToolsLogoLoaded(false)}
           style={{
-            borderRadius: 6,
             opacity: verifiedToolsLogoLoaded ? 1 : 0.01,
-            height: verifiedToolsLogoLoaded ? "54px" : "1px",
+            height: verifiedToolsLogoLoaded ? "74px" : "1px",
             width: "auto", // natural width
             objectFit: "contain",
             transition: "opacity 0.2s ease-out",
