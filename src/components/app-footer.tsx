@@ -22,11 +22,11 @@ export function AppFooter() {
   const { language } = useLanguage();
   const { t } = useTranslation();
 
-  const [productHuntLoaded, setProductHuntLoaded] = useState(false);
   const [verifiedToolsLogoLoaded, setVerifiedToolsLogoLoaded] = useState(false);
-  const [twelveToolsLogoLoaded, setTwelveToolsLogoLoaded] = useState(false);
+  const [justOpenSourceLogoLoaded, setJustOpenSourceLogoLoaded] = useState(false);
   const [auraPlusPlusLogoLoaded, setAuraPlusPlusLogoLoaded] = useState(false);
-  const [startupFameLogoLoaded, setStartupFameLogoLoaded] = useState(false);
+  const [twelveToolsLogoLoaded, setTwelveToolsLogoLoaded] = useState(false);
+  const [productHuntLoaded, setProductHuntLoaded] = useState(false);
 
   const madeByText: Record<string, LanguageStrings> = {
       en: { line: [ { text: `${t('madeBy')} `, isLink: false }, { text: "Maxim Bortnikov", isLink: true, link: { href: "https://maxim-bortnikov.netlify.app/", text: "Maxim Bortnikov" } }, { text: ` ${t('using')} `, isLink: false }, { text: "Next.js", isLink: true, link: { href: "https://nextjs.org/", text: "Next.js" } }, { text: ", ", isLink: false }, { text: "Perplexity", isLink: true, link: { href: "https://www.perplexity.ai/", text: "Perplexity" } }, { text: t('and'), isLink: false }, { text: "Firebase Studio", isLink: true, link: { href: "https://firebase.studio/", text: "Firebase Studio" } } ]},
@@ -77,48 +77,6 @@ export function AppFooter() {
         namerUIName={t("namerUi")}
       />
 
-      {/* Product Hunt badge (no href until loaded, subtle border only after load) */}
-      <a
-        href={
-          productHuntLoaded
-            ? "https://www.producthunt.com/products/nof?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-nof"
-            : undefined
-        }
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textDecoration: "none",
-          pointerEvents: productHuntLoaded ? "auto" : "none",
-          borderRadius: 6,
-          transition: "border-color 0.2s ease-out",
-        }}
-      >
-        <img
-          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1032819&theme=light&t=1761884417200"
-          alt={
-            productHuntLoaded
-              ? "Nof - Color palette generator | Product Hunt"
-              : ""
-          }
-          width={250}
-          height={54}
-          loading="lazy"
-          onLoad={() => setProductHuntLoaded(true)}
-          onError={() => setProductHuntLoaded(false)}
-          style={{
-            height: productHuntLoaded ? "54px" : "1px",
-            width: "auto",
-            borderRadius: 6,
-            opacity: productHuntLoaded ? 1 : 0.01,
-            objectFit: "contain",
-            transition: "opacity 0.2s ease-out",
-          }}
-        />
-      </a>
-
       {/* Verified Tools badge – natural width */}
       <a
         href={verifiedToolsLogoLoaded ? "https://www.verifiedtools.info" : undefined}
@@ -135,15 +93,128 @@ export function AppFooter() {
         <img
           src="https://www.verifiedtools.info/badge.png"
           alt={verifiedToolsLogoLoaded ? "Verified on Verified Tools" : ""}
-          width={200}
-          height={54}
           loading="lazy"
           onLoad={() => setVerifiedToolsLogoLoaded(true)}
           onError={() => setVerifiedToolsLogoLoaded(false)}
           style={{
             opacity: verifiedToolsLogoLoaded ? 1 : 0.01,
-            height: verifiedToolsLogoLoaded ? "74px" : "1px",
+            height: verifiedToolsLogoLoaded ? "82px" : "1px",
             width: "auto", // natural width
+            objectFit: "contain",
+            transition: "opacity 0.2s ease-out",
+          }}
+        />
+      </a>
+
+      {/* JustOpenSource Tool of the Week badge */}
+      <a
+        href={
+          justOpenSourceLogoLoaded
+            ? "https://justopensource.xyz/tools/nof"
+            : undefined
+        }
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "240px",
+          padding: "10px",
+          border: "2px solid oklch(0.685 0.169 237.323)",
+          borderRadius: "8px",
+          boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px",
+          textDecoration: "none",
+          backgroundColor: "white",
+          pointerEvents: justOpenSourceLogoLoaded ? "auto" : "none",
+          transition: "background-color 0.3s",
+        }}
+      >
+        <div 
+          style={{
+            opacity: justOpenSourceLogoLoaded ? 1 : 0.01,
+            height: justOpenSourceLogoLoaded ? "auto" : "1px",
+            width: justOpenSourceLogoLoaded ? "auto" : "1px",
+            transition: "opacity 0.2s ease-out",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <img
+            src="https://justopensource.xyz/logo.png"
+            alt={justOpenSourceLogoLoaded ? "JustOpenSource" : ""}
+            style={{
+              width: "80px",
+              height: "auto",
+            }}
+            loading="lazy"
+            onLoad={() => setJustOpenSourceLogoLoaded(true)}
+            onError={() => setJustOpenSourceLogoLoaded(false)}
+          />
+          <p 
+            style={{
+              fontSize: "1.125rem",
+              color: "#4b5563",
+              margin: "4px 0 0",
+              fontWeight: "400",
+            }}
+          >
+            Tool Of The Week
+          </p>
+        </div>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="48" 
+          height="48" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="#facc15" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+          style={{
+            opacity: justOpenSourceLogoLoaded ? 1 : 0.01,
+            transition: "opacity 0.2s ease-out",
+          }}
+        >
+          <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"></path>
+          <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"></path>
+          <path d="M18 9h1.5a1 1 0 0 0 0-5H18"></path>
+          <path d="M4 22h16"></path>
+          <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"></path>
+          <path d="M6 9H4.5a1 1 0 0 1 0-5H6"></path>
+        </svg>
+      </a>
+
+      {/* Aura++ badge – no outline, auto width */}
+      <a
+        href={
+          auraPlusPlusLogoLoaded
+            ? "https://auraplusplus.com/projects/nof"
+            : undefined
+        }
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: 4,
+          textDecoration: "none",
+          pointerEvents: auraPlusPlusLogoLoaded ? "auto" : "none",
+        }}
+      >
+        <img
+          src="https://auraplusplus.com/images/badges/featured-on-light.svg"
+          alt={auraPlusPlusLogoLoaded ? "Featured on Aura++" : ""}
+          loading="lazy"
+          onLoad={() => setAuraPlusPlusLogoLoaded(true)}
+          onError={() => setAuraPlusPlusLogoLoaded(false)}
+          style={{
+            borderRadius: 6,
+            opacity: auraPlusPlusLogoLoaded ? 1 : 0.01,
+            height: auraPlusPlusLogoLoaded ? "54px" : "1px",
+            width: "auto", // natural width, since original badge has no fixed width
             objectFit: "contain",
             transition: "opacity 0.2s ease-out",
           }}
@@ -183,11 +254,11 @@ export function AppFooter() {
         />
       </a>
 
-      {/* Aura++ badge – no outline, auto width */}
+      {/* Product Hunt badge (no href until loaded, subtle border only after load) */}
       <a
         href={
-          auraPlusPlusLogoLoaded
-            ? "https://auraplusplus.com/projects/nof"
+          productHuntLoaded
+            ? "https://www.producthunt.com/products/nof?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-nof"
             : undefined
         }
         target="_blank"
@@ -196,59 +267,29 @@ export function AppFooter() {
           display: "inline-flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: 4,
           textDecoration: "none",
-          pointerEvents: auraPlusPlusLogoLoaded ? "auto" : "none",
+          pointerEvents: productHuntLoaded ? "auto" : "none",
+          borderRadius: 6,
+          transition: "border-color 0.2s ease-out",
         }}
       >
         <img
-          src="https://auraplusplus.com/images/badges/featured-on-light.svg"
-          alt={auraPlusPlusLogoLoaded ? "Featured on Aura++" : ""}
-          loading="lazy"
-          onLoad={() => setAuraPlusPlusLogoLoaded(true)}
-          onError={() => setAuraPlusPlusLogoLoaded(false)}
-          style={{
-            borderRadius: 6,
-            opacity: auraPlusPlusLogoLoaded ? 1 : 0.01,
-            height: auraPlusPlusLogoLoaded ? "54px" : "1px",
-            width: "auto", // natural width, since original badge has no fixed width
-            objectFit: "contain",
-            transition: "opacity 0.2s ease-out",
-          }}
-        />
-      </a>
-
-      {/* Startup Fame badge – Nof URL, natural width */}
-      <a
-        href={
-          startupFameLogoLoaded
-            ? "https://startupfa.me/s/nofpg.netlify.app?utm_source=nofpg.netlify.app"
-            : undefined
-        }
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: 4,
-          textDecoration: "none",
-          pointerEvents: startupFameLogoLoaded ? "auto" : "none",
-        }}
-      >
-        <img
-          src="https://startupfa.me/badges/featured/dark.webp"
-          alt={startupFameLogoLoaded ? "Nof - Featured on Startup Fame" : ""}
-          width={171}
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1032819&theme=light&t=1761884417200"
+          alt={
+            productHuntLoaded
+              ? "Nof - Color palette generator | Product Hunt"
+              : ""
+          }
+          width={250}
           height={54}
           loading="lazy"
-          onLoad={() => setStartupFameLogoLoaded(true)}
-          onError={() => setStartupFameLogoLoaded(false)}
+          onLoad={() => setProductHuntLoaded(true)}
+          onError={() => setProductHuntLoaded(false)}
           style={{
-            borderRadius: 6,
-            opacity: startupFameLogoLoaded ? 1 : 0.01,
-            height: startupFameLogoLoaded ? "54px" : "1px",
+            height: productHuntLoaded ? "54px" : "1px",
             width: "auto",
+            borderRadius: 6,
+            opacity: productHuntLoaded ? 1 : 0.01,
             objectFit: "contain",
             transition: "opacity 0.2s ease-out",
           }}
