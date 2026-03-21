@@ -5,7 +5,7 @@ SourceForge page: https://sourceforge.net/projects/nofpg/
 
 Live app: https://nofpg.netlify.app/
 
-![Preview](https://raw.githubusercontent.com/Northstrix/nof/refs/heads/main/preview.png)
+![Preview](https://raw.githubusercontent.com/Northstrix/nof/refs/heads/main/Preview.webp)
 
 Powered by [Namer UI](https://namer-ui.vercel.app/)
 
