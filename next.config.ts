@@ -9,19 +9,6 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'api.producthunt.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.foundrlist.me',
-      },
-    ],
-  },
-
   output: 'export',
 };
 
