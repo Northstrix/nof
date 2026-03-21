@@ -33,13 +33,13 @@ Powered by [Namer UI](https://namer-ui.vercel.app/)
 
 [AnimateIcons](https://animateicons.vercel.app/)
 
-[i18next](https://www.npmjs.com/package/i18next)
-
 [Lucide React](https://www.npmjs.com/package/lucide-react)
 
 [uuid](https://www.npmjs.com/package/uuid)
 
 [radix-ui](https://www.npmjs.com/package/radix-ui)
+
+[sweetalert2](https://github.com/sweetalert2/sweetalert2)
 
 [Custom Checkbox](https://21st.dev/Edil-ozi/custom-checkbox/default) by [Edil Ozi](https://21st.dev/Edil-ozi)
 
