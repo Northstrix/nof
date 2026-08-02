@@ -20,7 +20,7 @@ export type Locale = typeof supportedLocales[number];
 export const translations = {
   en: {
     appName: 'Nof',
-    subtitle: 'A modern color palette generator that makes it possible to create a complete color palette from just one base color.',
+    subtitle: 'A complementary color palette generator with brightness adjustment functionality and several color-mixing modes.',
     baseColor: 'Base Color',
     mode: 'Mode',
     palette: 'Palette',
@@ -68,7 +68,7 @@ export const translations = {
   },
   he: {
     appName: 'נוף',
-    subtitle: 'יוצר ערכות צבעים מודרניות שמאפשר ליצור פלטת צבעים מלאה מצבע בסיס אחד בלבד.',
+    subtitle: 'מחולל פלטת צבעים משלימה עם אפשרות לכוונן בהירות וכמה מצבי ערבוב צבעים.',
     baseColor: 'צבע בסיס',
     mode: 'מצב',
     palette: 'פלטה',
@@ -116,7 +116,7 @@ export const translations = {
   },
   it: {
     appName: 'Nof',
-    subtitle: 'Un moderno generatore di palette che permette di creare un’intera palette di colori partendo da un solo colore base.',
+    subtitle: 'Un generatore di palette di colori complementari con funzionalità di regolazione della luminosità e diverse modalità di miscelazione dei colori.',
     baseColor: 'Colore base',
     mode: 'Modalità',
     palette: 'Palette',
@@ -164,7 +164,7 @@ export const translations = {
   },
   es: {
     appName: 'Nof',
-    subtitle: 'Un generador moderno de paletas de colores que permite crear una paleta completa a partir de un solo color base.',
+    subtitle: 'Un generador de paletas de colores complementarias con función de ajuste de brillo y varios modos de mezcla de colores.',
     baseColor: 'Color base',
     mode: 'Modo',
     palette: 'Paleta',
@@ -212,7 +212,7 @@ export const translations = {
   },
   pt: {
     appName: 'Nof',
-    subtitle: 'Um gerador moderno de paletas de cores que permite criar uma paleta completa a partir de apenas uma cor base.',
+    subtitle: 'Um gerador de paletas de cores complementares com ajuste de brilho e várias modos de mistura de cores.',
     baseColor: 'Cor base',
     mode: 'Modo',
     palette: 'Paleta',
@@ -260,7 +260,7 @@ export const translations = {
   },
   yue: {
     appName: 'Nof',
-    subtitle: '現代化嘅色彩調色盤產生器，只需一個基礎色就可以建立完整嘅色彩方案。',
+    subtitle: '一個互補色調色板生成器，具亮度調整功能及多種顏色混合模式。',
     baseColor: '基礎顏色',
     mode: '模式',
     palette: '調色盤',
@@ -308,7 +308,7 @@ export const translations = {
   },
   ja: {
     appName: 'Nof',
-    subtitle: 'ベースとなる1色から完全なカラーパレットを作成できる、モダンなカラーパレットジェネレーターです。',
+    subtitle: '明度調整機能と複数のカラー混合モードを備えた補色パレット生成器。',
     baseColor: 'ベースカラー',
     mode: 'モード',
     palette: 'パレット',
@@ -356,7 +356,7 @@ export const translations = {
   },
   ko: {
     appName: 'Nof',
-    subtitle: '하나의 기본 색상만으로 완전한 색상 팔레트를 만들 수 있는 현대적인 팔레트 생성기입니다.',
+    subtitle: '밝기 조정 기능과 여러 가지 색상 혼합 모드를 갖춘 보색 팔레트 생성기。',
     baseColor: '기본 색상',
     mode: '모드',
     palette: '팔레트',
@@ -404,7 +404,7 @@ export const translations = {
   },
   vi: {
     appName: 'Nof',
-    subtitle: 'Trình tạo bảng màu hiện đại cho phép bạn tạo bảng màu hoàn chỉnh chỉ từ một màu cơ bản.',
+    subtitle: 'Trình sinh màu sắc bổ sung với chức năng điều chỉnh độ sáng và nhiều chế độ pha màu.',
     baseColor: 'Màu cơ bản',
     mode: 'Chế độ',
     palette: 'Bảng màu',
@@ -452,7 +452,7 @@ export const translations = {
   },
   pl: {
     appName: 'Nof',
-    subtitle: 'Nowoczesny generator palet kolorów, który umożliwia stworzenie pełnej palety z jednego koloru bazowego.',
+    subtitle: 'Kompementarny generator palet barw z funkcją regulacji jasności i kilkoma trybami mieszania kolorów.',
     baseColor: 'Kolor bazowy',
     mode: 'Tryb',
     palette: 'Paleta',
@@ -500,7 +500,7 @@ export const translations = {
   },
   cs: {
     appName: 'Nof',
-    subtitle: 'Moderní generátor barevných palet, který umožňuje vytvořit celou paletu pouze z jedné základní barvy.',
+    subtitle: 'Komplementární generátor barev s funkcí nastavení jasu a několika režimy míchání barev.',
     baseColor: 'Základní barva',
     mode: 'Režim',
     palette: 'Paleta',
@@ -548,7 +548,7 @@ export const translations = {
   },
   hu: {
     appName: 'Nof',
-    subtitle: 'Egy modern színpaletta-generátor, amellyel egyetlen alapszínből teljes palettát hozhatsz létre.',
+    subtitle: 'Kiegészítő színpaletta generátor a fényesség állítás funkcióval és több színkeverési móddal.',
     baseColor: 'Alapszín',
     mode: 'Mód',
     palette: 'Paletta',
@@ -596,7 +596,7 @@ export const translations = {
   },
   fr: {
     appName: 'Nof',
-    subtitle: 'Un générateur de palettes moderne qui permet de créer une palette complète à partir d’une seule couleur de base.',
+    subtitle: 'Un générateur de palettes de couleurs complémentaires avec une fonction de réglage de la luminosité et plusieurs modes de mélange.',
     baseColor: 'Couleur de base',
     mode: 'Mode',
     palette: 'Palette',
@@ -644,7 +644,7 @@ export const translations = {
   },
   de: {
     appName: 'Nof',
-    subtitle: 'Ein moderner Farbpaletten-Generator, mit dem sich aus einer einzigen Basisfarbe eine vollständige Palette erstellen lässt.',
+    subtitle: 'Ein Generator für komplementäre Farbpalletten mit Helligkeitseinstellung und mehreren Mischmodi.',
     baseColor: 'Basisfarbe',
     mode: 'Modus',
     palette: 'Palette',
@@ -692,7 +692,7 @@ export const translations = {
   },
   nl: {
     appName: 'Nof',
-    subtitle: 'Een moderne kleurenpaletgenerator waarmee je een volledig palet kunt maken op basis van één basiskleur.',
+    subtitle: 'Een complementaire kleurenpaletgenerator met helderheidsaanpassing en meerdere kleurmengmodi.',
     baseColor: 'Basiskleur',
     mode: 'Modus',
     palette: 'Palet',

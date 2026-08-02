@@ -23,7 +23,6 @@ export function AppFooter() {
   const { t } = useTranslation();
 
   const [verifiedToolsLogoLoaded, setVerifiedToolsLogoLoaded] = useState(false);
-  const [justOpenSourceLogoLoaded, setJustOpenSourceLogoLoaded] = useState(false);
   const [auraPlusPlusLogoLoaded, setAuraPlusPlusLogoLoaded] = useState(false);
   const [twelveToolsLogoLoaded, setTwelveToolsLogoLoaded] = useState(false);
   const [productHuntLoaded, setProductHuntLoaded] = useState(false);
@@ -106,92 +105,12 @@ export function AppFooter() {
           onError={() => setVerifiedToolsLogoLoaded(false)}
           style={{
             opacity: verifiedToolsLogoLoaded ? 1 : 0.01,
-            height: verifiedToolsLogoLoaded ? "82px" : "1px",
+            height: verifiedToolsLogoLoaded ? "68px" : "1px",
             width: "auto", // natural width
             objectFit: "contain",
             transition: "opacity 0.2s ease-out",
           }}
         />
-      </a>
-
-      {/* JustOpenSource Tool of the Week badge */}
-      <a
-        href={
-          justOpenSourceLogoLoaded
-            ? "https://justopensource.xyz/tools/nof"
-            : undefined
-        }
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "240px",
-          padding: "10px",
-          border: "2px solid oklch(0.685 0.169 237.323)",
-          borderRadius: "8px",
-          boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px",
-          textDecoration: "none",
-          backgroundColor: "white",
-          pointerEvents: justOpenSourceLogoLoaded ? "auto" : "none",
-          transition: "background-color 0.3s",
-        }}
-      >
-        <div 
-          style={{
-            opacity: justOpenSourceLogoLoaded ? 1 : 0.01,
-            height: justOpenSourceLogoLoaded ? "auto" : "1px",
-            width: justOpenSourceLogoLoaded ? "auto" : "1px",
-            transition: "opacity 0.2s ease-out",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <img
-            src="https://justopensource.xyz/logo.png"
-            alt={justOpenSourceLogoLoaded ? "JustOpenSource" : ""}
-            style={{
-              width: "80px",
-              height: "auto",
-            }}
-            loading="lazy"
-            onLoad={() => setJustOpenSourceLogoLoaded(true)}
-            onError={() => setJustOpenSourceLogoLoaded(false)}
-          />
-          <p 
-            style={{
-              fontSize: "1.125rem",
-              color: "#4b5563",
-              margin: "4px 0 0",
-              fontWeight: "400",
-            }}
-          >
-            Tool Of The Week
-          </p>
-        </div>
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="48" 
-          height="48" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="#facc15" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
-          style={{
-            opacity: justOpenSourceLogoLoaded ? 1 : 0.01,
-            transition: "opacity 0.2s ease-out",
-          }}
-        >
-          <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"></path>
-          <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"></path>
-          <path d="M18 9h1.5a1 1 0 0 0 0-5H18"></path>
-          <path d="M4 22h16"></path>
-          <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"></path>
-          <path d="M6 9H4.5a1 1 0 0 1 0-5H6"></path>
-        </svg>
       </a>
 
       {/* Aura++ badge – no outline, auto width */}
@@ -207,7 +126,6 @@ export function AppFooter() {
           display: "inline-flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: 4,
           textDecoration: "none",
           pointerEvents: auraPlusPlusLogoLoaded ? "auto" : "none",
         }}
@@ -238,7 +156,7 @@ export function AppFooter() {
           display: "inline-flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: 4,
+
           textDecoration: "none",
           pointerEvents: twelveToolsLogoLoaded ? "auto" : "none",
         }}
