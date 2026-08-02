@@ -1,5 +1,5 @@
 # Nof | נוף
-A modern color palette generator that lets you effortlessly create a complete color palette from just one base color.
+A complementary color palette generator with brightness adjustment functionality and several color-mixing modes.
 
 SourceForge page: https://sourceforge.net/projects/nofpg/
 
